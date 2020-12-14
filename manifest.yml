@@ -1,0 +1,11 @@
+---
+applications:
+- name: redis-spring-reference
+  memory: 1G
+  random-route: true
+  path: target/redis-spring-reference-0.0.1-SNAPSHOT.jar
+  instances: 1
+  services:
+  env:
+    SPRING_PROFILES_ACTIVE: cloud
+    JBP_CONFIG_SPRING_AUTO_RECONFIGURATION: '{enabled: false}'
